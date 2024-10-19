@@ -1,0 +1,52 @@
+<div class="header p-1 mb-2">
+  <div class="header-left">
+    <img src="assets/logo.png" height="60" width="60" />
+    <span class="ms-1">Delhi Public School</span>
+  </div>
+  <div class="header-left header-right">
+    <img src="assets/avatar.png" height="60" width="60" />
+    <span [matMenuTriggerFor]="menu">John</span>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+    <mat-icon>notifications</mat-icon>
+  </div>
+</div>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <div class="drawer-header">
+      <div class="my-button">John</div>
+      <mat-icon>menu</mat-icon>
+    </div>
+    <div class="drawer-list">
+      <div class="list mt-3" *ngFor="let item of menuList">
+        <mat-icon class="me-2">{{ item.icon }}</mat-icon>
+        <span>{{ item.title }}</span>
+      </div>
+    </div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content p-3">
+    <h3>Student Leaves</h3>
+    <div class="option">
+      <div class="option-left">
+        <mat-form-field appearance="fill">
+          <mat-label>Acadamic Year</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let year of yearList" [value]="year">
+              {{ year }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="option-right">
+        <div class="add-new" (click)="openDialog()">
+          <mat-icon>add</mat-icon>
+          <span>Add new leave</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-drawer-container>

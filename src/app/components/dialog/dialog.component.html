@@ -1,0 +1,46 @@
+<div class="container">
+  <h3>Add New Leave</h3>
+  <form [formGroup]="leaveForm" class="login-form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Enter your email</mat-label>
+      <input
+        matInput
+        placeholder="enter your class"
+        formControlName="class"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your section</mat-label>
+      <input
+        matInput
+        placeholder="enter your section"
+        formControlName="section"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your student</mat-label>
+      <input
+        matInput
+        placeholder="enter your student"
+        formControlName="student"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter your reason</mat-label>
+      <input
+        matInput
+        placeholder="enter your reason"
+        formControlName="reason"
+        required
+      />
+    </mat-form-field>
+
+    <div class="button-end mt-3">
+      <button class="" mat-raised-button color="primary">OK</button>
+    </div>
+  </form>
+</div>

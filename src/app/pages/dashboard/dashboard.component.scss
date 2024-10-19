@@ -1,0 +1,124 @@
+.example-container {
+  width: 100%;
+  height: 90%;
+  border: none;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-sidenav {
+  display: flex;
+  flex-direction: column;
+  //   width: 180px;
+  padding: 5px 10px;
+  background-color: purple;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-right {
+  span {
+    cursor: pointer;
+  }
+}
+
+.drawer-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  mat-icon {
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.my-button {
+  background-color: #ffeb3b;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.drawer-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  mat-icon {
+    color: white;
+  }
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.option-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.option-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add-new {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ffeb3b;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.full-screen-modal {
+  max-width: unset !important;
+  width: 100%;
+  height: 100%;
+  .mat-dialog-container {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100%;
+    width: 100%;
+    .mat-dialog-content {
+      max-height: unset !important;
+    }
+  }
+}

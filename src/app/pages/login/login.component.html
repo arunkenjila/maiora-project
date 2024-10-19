@@ -1,0 +1,45 @@
+<div class="bg-image"></div>
+<div class="container d-flex">
+  <div class="login-container">
+    <div class="image-container">
+      <img src="/assets/login.jpg" height="400" width="500" />
+    </div>
+    <div class="form-container">
+      <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
+        <div class="login-buttons m-3">
+          <button class="me-3" mat-raised-button color="primary">Login</button>
+          <button mat-raised-button>Register</button>
+        </div>
+        <div class="login-text">
+          <h3>Welcome</h3>
+          <p>Please login to your account</p>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input
+            matInput
+            placeholder="enter your mail"
+            formControlName="email"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Enter your password</mat-label>
+          <input
+            type="password"
+            matInput
+            placeholder="enter your password"
+            formControlName="password"
+            required
+          />
+        </mat-form-field>
+        <div class="button-end mt-3">
+          <span>Forgot</span>
+          <button class="" mat-raised-button color="primary">OK</button>
+        </div>
+        <p class="mt-3 error">{{ errorMessage }}</p>
+      </form>
+    </div>
+  </div>
+</div>
